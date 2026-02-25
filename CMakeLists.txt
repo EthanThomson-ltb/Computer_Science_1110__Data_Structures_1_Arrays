@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 4.1)
+project(Computer_Science_1110__Data_Structures_1_Arrays)
+
+set(CMAKE_CXX_STANDARD 20)
+
+add_executable(Computer_Science_1110__Data_Structures_1_Arrays main.cpp)

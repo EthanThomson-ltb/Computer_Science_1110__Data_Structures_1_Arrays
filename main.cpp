@@ -4,16 +4,19 @@ using namespace std;
 //scans for array values (Not necessary, but I wanted to test it)
 void arrayScan(int arr[], int arraySize);
 
-
 //sums the array
 int arraySum(int arr[], int arraySize);
 
+//Finds the smallest number
 int arrayMin(int arr[], int arraySize);
 
+//Find the largest number
 int arrayMax(int arr[], int arraySize);
 
+//Counts number of even ints
 int countEven(int arr[], int arraySize);
 
+//Counts number of ints above average
 int countAbvAvg(int arr[], int arraySize, int arrayAvg);
 
 int main() {
@@ -39,9 +42,9 @@ int main() {
 
     cout << endl;
     //Sum/Avg calculations
+    //(used in the countAbvAvg function)
     int sum = arraySum(arr, arraySize);
     int avg = sum / arraySize;
-
 
     //Printing output data
     cout << "Total: " << sum << endl;
@@ -62,7 +65,7 @@ void arrayScan(int arr[], const int arraySize) {
 }
 
 //sums the array
-int arraySum(const int arr[], const int arraySize) {
+int arraySum(int arr[], const int arraySize) {
     int sum = 0;
     for (int i = 0; i < arraySize; i++) {
         sum += arr[i];
@@ -70,3 +73,46 @@ int arraySum(const int arr[], const int arraySize) {
     return sum;
 }
 
+//Finds the smallest number
+int arrayMin(int arr[], const int arraySize) {
+    int min = arr[0];
+    for (int i = 1; i < arraySize; i++) {
+        if (arr[i] < min) {
+            min = arr[i];
+        }
+    }
+    return min;
+}
+
+//Find the largest number
+int arrayMax(int arr[], const int arraySize) {
+    int max = arr[0];
+    for (int i = 1; i < arraySize; i++) {
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+//Counts number of even ints
+int countEven(int arr[], const int arraySize) {
+    int evenCount = 0;
+    for (int i = 0; i < arraySize; i++) {
+        if (arr[i] % 2 == 0) {
+            evenCount++;
+        }
+    }
+    return evenCount;
+}
+
+//Counts number of ints above average
+int countAbvAvg(int arr[], const int arraySize, int arrayAvg) {
+    int avgCount = 0;
+    for (int i = 0; i < arraySize; i++) {
+        if (arr[i] > arrayAvg) {
+            avgCount++;
+        }
+    }
+    return avgCount;
+}

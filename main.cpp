@@ -33,7 +33,7 @@ int main() {
             cout << "Invalid size, please try again." << endl;
         }
     }
-    cout << "Scanning for " << arraySize << " numbers." << endl;
+    cout << "Scanning for  " << arraySize << " numbers." << endl;
     int arr[arraySize];
     arrayScan(arr, arraySize);
 
